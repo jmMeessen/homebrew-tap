@@ -5,21 +5,21 @@
 class JenkinsGetCommenters < Formula
   desc "Jenkins Submitter Pivot Table analyzer."
   homepage "https://github.com/jmMeessen/jenkins-get-commenters"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jmMeessen/jenkins-get-commenters/releases/download/v0.0.2/jenkins-get-commenters_0.0.2_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "54ade708e340a10356fc60be53242ff85ea26b3aff0c753e1a036c955785a08b"
+      url "https://github.com/jmMeessen/jenkins-get-commenters/releases/download/v0.0.3/jenkins-get-commenters_0.0.3_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "2264cc74281e6824b81dcaa010b9c061157a109fd0302fedba62db97fb0eb473"
 
       def install
         bin.install "jenkins-get-commenters"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jmMeessen/jenkins-get-commenters/releases/download/v0.0.2/jenkins-get-commenters_0.0.2_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "17288830b95caaf53ce7b1e09522161bde77a0c8de6c09913714c111c0fe359d"
+      url "https://github.com/jmMeessen/jenkins-get-commenters/releases/download/v0.0.3/jenkins-get-commenters_0.0.3_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "433c483842fa9fa7b8fdc959717ff0e28c3082c7ea13fa4e0528b018ef8a60fd"
 
       def install
         bin.install "jenkins-get-commenters"
@@ -28,25 +28,25 @@ class JenkinsGetCommenters < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jmMeessen/jenkins-get-commenters/releases/download/v0.0.2/jenkins-get-commenters_0.0.2_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "6952dd7f7c779a2013533059d5a63a916ac8424c5e8206eca13c4b9b73a6cacd"
-
-      def install
-        bin.install "jenkins-get-commenters"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jmMeessen/jenkins-get-commenters/releases/download/v0.0.2/jenkins-get-commenters_0.0.2_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "3bc4322388e0abbefb6c6ef57b49878bee24afe99ad6bbe07a98177da7525815"
+      url "https://github.com/jmMeessen/jenkins-get-commenters/releases/download/v0.0.3/jenkins-get-commenters_0.0.3_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "fcee402075ae5d6f1e9a809eb8ec2b683a872dac2b89a8cee2044f3dae25621d"
 
       def install
         bin.install "jenkins-get-commenters"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jmMeessen/jenkins-get-commenters/releases/download/v0.0.2/jenkins-get-commenters_0.0.2_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "69fdcdda6351556cad93696f04eb7a740a48c0b86ad8b4379d5a1f84d213cce5"
+      url "https://github.com/jmMeessen/jenkins-get-commenters/releases/download/v0.0.3/jenkins-get-commenters_0.0.3_linux_armv6.tar.gz", using: CurlDownloadStrategy
+      sha256 "835f167ae340de6eed22de6543a87a0b5fd746619408657d2a37ba768b6b97d7"
+
+      def install
+        bin.install "jenkins-get-commenters"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/jmMeessen/jenkins-get-commenters/releases/download/v0.0.3/jenkins-get-commenters_0.0.3_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "dac4c79ca46ffb4bfc9018840462c72ccf31e61380577ab5f7522406250079d5"
 
       def install
         bin.install "jenkins-get-commenters"
