@@ -5,21 +5,21 @@
 class JenkinsStats < Formula
   desc "Jenkins Submitter Pivot Table analyzer."
   homepage "https://github.com/jmMeessen/jenkins-stats"
-  version "0.2.2"
+  version "0.2.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jmMeessen/jenkins-stats/releases/download/v0.2.2/jenkins-stats_0.2.2_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "7c9a0770e5af014617673c09e56b4267d37f6c0e5c182fb20e7c5364bf5b2ff8"
+      url "https://github.com/jmMeessen/jenkins-stats/releases/download/v0.2.4/jenkins-stats_0.2.4_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "a3f8135c50119de76942d4d0bd4d21ab98ef9b11391663fd70932ec3d2d5bed6"
 
       def install
         bin.install "jenkins-stats"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jmMeessen/jenkins-stats/releases/download/v0.2.2/jenkins-stats_0.2.2_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "9fd8043927f3427fa8bdd3ce2b7e3dfafa40390ed0fa29a9c2ff9a9633275fab"
+      url "https://github.com/jmMeessen/jenkins-stats/releases/download/v0.2.4/jenkins-stats_0.2.4_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "84b89e50fa7f9909ec1daef0ee4dd071c06bd42aa65cd8c6ea851178aafe6d6b"
 
       def install
         bin.install "jenkins-stats"
@@ -28,25 +28,25 @@ class JenkinsStats < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jmMeessen/jenkins-stats/releases/download/v0.2.2/jenkins-stats_0.2.2_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "35f57574b973a68dda2fdf625a0cbc5ce4562ba90ccfbba6bb9a5398b180131a"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/jmMeessen/jenkins-stats/releases/download/v0.2.4/jenkins-stats_0.2.4_linux_armv6.tar.gz", using: CurlDownloadStrategy
+      sha256 "ff5138a4719bd2c562bfcc1dbd1d0e338ef85a4b268323c5c9c20f6a18246d3b"
 
       def install
         bin.install "jenkins-stats"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jmMeessen/jenkins-stats/releases/download/v0.2.2/jenkins-stats_0.2.2_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "abc30751ca1eaede4e42ed006a65d5bb219c955f2fa8a2170c95033185faafce"
+    if Hardware::CPU.intel?
+      url "https://github.com/jmMeessen/jenkins-stats/releases/download/v0.2.4/jenkins-stats_0.2.4_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "0d68d1a64b89b26eb8437867107c2f2c08fb5dbaaf505fed93a0026fa2701723"
 
       def install
         bin.install "jenkins-stats"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jmMeessen/jenkins-stats/releases/download/v0.2.2/jenkins-stats_0.2.2_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "235b1d46a61a1148b67e47a4d826f575f8f9f1c47c50ac62630c444a08bded19"
+      url "https://github.com/jmMeessen/jenkins-stats/releases/download/v0.2.4/jenkins-stats_0.2.4_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "4cd9efa025174c6fe9c6c63917be979b0fa978cdfed0a6f231d1400ea8ecc4dc"
 
       def install
         bin.install "jenkins-stats"
