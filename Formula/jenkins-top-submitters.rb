@@ -5,21 +5,21 @@
 class JenkinsTopSubmitters < Formula
   desc "Jenkins Submitter Pivot Table analyzer."
   homepage "https://github.com/jmMeessen/jenkins-top-submitters"
-  version "1.2.3"
+  version "1.2.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jmMeessen/jenkins-top-submitters/releases/download/v1.2.3/jenkins-top-submitters_1.2.3_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0e8f148b16b14e1391bad92bae36850f5d58ed61e913fd2c8ec83694b20fcee9"
+      url "https://github.com/jmMeessen/jenkins-top-submitters/releases/download/v1.2.4/jenkins-top-submitters_1.2.4_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "7894e5b2fabdfb69f27fce811ef8126f0102fc8c37299cf4ceb6a1b314c766dd"
 
       def install
         bin.install "jenkins-top-submitters"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jmMeessen/jenkins-top-submitters/releases/download/v1.2.3/jenkins-top-submitters_1.2.3_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "d5afb01e3743650cf4b4d67bacbe5747788002526c1e76837de760be4164911f"
+      url "https://github.com/jmMeessen/jenkins-top-submitters/releases/download/v1.2.4/jenkins-top-submitters_1.2.4_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "7fea7ba8518000f6dea85cc229291c6c4dd57f001357ce6ebe6cf2a3bb8f813f"
 
       def install
         bin.install "jenkins-top-submitters"
@@ -28,25 +28,25 @@ class JenkinsTopSubmitters < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jmMeessen/jenkins-top-submitters/releases/download/v1.2.3/jenkins-top-submitters_1.2.3_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "94538e97375250eaeddaf5e0dced6804abeb9ec58144041f2ff9a07b87ab1c5a"
+    if Hardware::CPU.intel?
+      url "https://github.com/jmMeessen/jenkins-top-submitters/releases/download/v1.2.4/jenkins-top-submitters_1.2.4_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "e67ee3a93bd48ccd59e644da870952a578f3419043c49cf32024ecf50913e19d"
 
       def install
         bin.install "jenkins-top-submitters"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jmMeessen/jenkins-top-submitters/releases/download/v1.2.3/jenkins-top-submitters_1.2.3_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "cc80f0bb37e0cb506482aae6cdaec91222c03506ccd6260b8c0155a9e463def2"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/jmMeessen/jenkins-top-submitters/releases/download/v1.2.4/jenkins-top-submitters_1.2.4_linux_armv6.tar.gz", using: CurlDownloadStrategy
+      sha256 "7edea5d60c63c5145ef96677133d5b593cb99c080b2d4fd221237366237fbe10"
 
       def install
         bin.install "jenkins-top-submitters"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jmMeessen/jenkins-top-submitters/releases/download/v1.2.3/jenkins-top-submitters_1.2.3_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "5d6fb86a723deef7152d40616bababa1b4a55b5abaf4814d62d6d6a42de646f4"
+      url "https://github.com/jmMeessen/jenkins-top-submitters/releases/download/v1.2.4/jenkins-top-submitters_1.2.4_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "bb091a41707ff9b459c36120836228a0eead29daea3542d9f78387e7336a2021"
 
       def install
         bin.install "jenkins-top-submitters"
